@@ -97,7 +97,7 @@ public class Product {
         buildString.append("defaultPrice:" + getDefaultPrice() + ",");
         buildString.append("defaultCurrency:" + getDefaultCurreny() + ",");
         buildString.append("productCategory:" + getProductCategory() + ",");
-        buildString.append("supplier:" + getSupplier() + ",");
+        buildString.append("supplier:" + getSupplier());
 
         return buildString.toString();
     }
