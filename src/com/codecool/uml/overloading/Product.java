@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Product {
 
-    private int id = 1;
+    private int id = 0;
     private String name;
     private float defaultPrice;
     private Currency defaultCurreny;
@@ -14,7 +14,7 @@ public class Product {
     private Supplier supplier;
     private static List<Product> productList = new ArrayList<>();
 
-    public Product() {
+    Product() {
         id++;
     }
 
@@ -70,7 +70,7 @@ public class Product {
         this.supplier = supplier;
     }
 
-    public List<Product> getAllProductsBy(ProductCategory productCategory) {
+    public static List<Product> getAllProductsBy(ProductCategory productCategory) {
         List<Product> getAllProductsByCategory = new ArrayList<>();
         for (Product product : productList) {
             if (product.getProductCategory().equals(productCategory)) {
@@ -80,7 +80,7 @@ public class Product {
         return getAllProductsByCategory;
     }
 
-    public List<Product> getAllProductsBy(Supplier supplier) {
+    public static List<Product> getAllProductsBy(Supplier supplier) {
         List<Product> productsBySupplier = new ArrayList<>();
         for (Product product: productList) {
             if (product.getSupplier().equals(supplier)) {
@@ -96,7 +96,7 @@ public class Product {
         buildString.append("name:" + getName() + ",");
         buildString.append("defaultPrice:" + getDefaultPrice() + ",");
         buildString.append("defaultCurrency:" + getDefaultCurreny() + ",");
-        buildString.append("productCategory:" + getProductCategory() + ",");
+        buildString.append("productCategory:" + getProductCategory().getName() + ",");
         buildString.append("supplier:" + getSupplier());
 
         return buildString.toString();

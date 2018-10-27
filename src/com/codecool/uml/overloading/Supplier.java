@@ -4,18 +4,19 @@ import java.util.List;
 
 public class Supplier {
 
-    private int id = 1;
+    private int id = 0;
     private String name;
     private String description;
 
-    public Supplier() {
+    Supplier() {
         id++;
     }
 
-    public Supplier(String name, String description) {
+    Supplier(String name, String description) {
         id++;
         this.name = name;
         this.description = description;
+
     }
 
     public int getId() {
@@ -44,9 +45,9 @@ public class Supplier {
 
     public String toString() {
         StringBuilder buildString = new StringBuilder();
-        buildString.append("id" + getId() + ",");
-        buildString.append("name" + getName() + ",");
-        buildString.append("description" + getDescription());
+        buildString.append("id:" + getId() + ",");
+        buildString.append("name:" + getName() + ",");
+        buildString.append("description:" + getDescription());
 
         return buildString.toString();
     }

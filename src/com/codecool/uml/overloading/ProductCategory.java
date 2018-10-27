@@ -4,16 +4,16 @@ import java.util.List;
 
 public class ProductCategory {
 
-    private int id = 1;
+    private int id = 0;
     private String name;
     private String department;
     private String description;
 
-    public ProductCategory() {
+    ProductCategory() {
         id++;
     }
 
-    public ProductCategory(String name, String department, String description) {
+    ProductCategory(String name, String department, String description) {
         id++;
         this.name = name;
         this.department = department;
@@ -54,10 +54,10 @@ public class ProductCategory {
 
     public String toString() {
         StringBuilder buildString = new StringBuilder();
-        buildString.append("id" + getId() + ",");
-        buildString.append("name" + getName() + ",");
-        buildString.append("department" + getDepartment() + ",");
-        buildString.append("description" + getDescription());
+        buildString.append("id:" + getId() + ",");
+        buildString.append("name:" + getName() + ",");
+        buildString.append("department:" + getDepartment() + ",");
+        buildString.append("description:" + getDescription());
 
         return buildString.toString();
 
